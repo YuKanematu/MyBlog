@@ -36,7 +36,6 @@ MyBlogは、シンプルな個人用ブログアプリケーションです。�
 
 ## データベーステーブル構成
 
-```sql
 CREATE TABLE blog_post (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
