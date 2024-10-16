@@ -46,6 +46,18 @@ CREATE TABLE blog_post (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+| カラム名       | データ型        | 制約                                         | 説明                       |
+|----------------|-----------------|----------------------------------------------|----------------------------|
+| id             | SERIAL          | PRIMARY KEY                                  | 一意の識別子（自動インクリメント） |
+| title          | VARCHAR(255)    | NOT NULL                                     | 投稿のタイトル              |
+| content        | TEXT            | NOT NULL                                     | 投稿の内容                  |
+| author         | VARCHAR(100)    | NOT NULL                                     | 投稿者の名前                |
+| created_at     | TIMESTAMP       | NOT NULL, DEFAULT CURRENT_TIMESTAMP          | 作成日時                    |
+| updated_at     | TIMESTAMP       | NOT NULL, DEFAULT CURRENT_TIMESTAMP          | 更新日時                    |
+
+
+## ディレクトリ構成
+
 MyBlog/
 ├── src/
 │   ├── main/
