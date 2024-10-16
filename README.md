@@ -1,7 +1,8 @@
 # MyBlog Application
 
 ## 概要
-MyBlogは、シンプルな個人用ブログアプリケーションです。ユーザーは、ブログ投稿の作成、編集、削除、投稿一覧表示を行うことができます。
+MyBlogは、シンプルな個人用ブログアプリケーションです。  
+ユーザーは、ブログ投稿の作成、編集、削除、投稿一覧表示を行うことができます。
 
 ## 機能
 - **投稿の作成**  
@@ -35,16 +36,6 @@ MyBlogは、シンプルな個人用ブログアプリケーションです。�
 - **Spring Boot DevTools**: 開発支援ツール
 
 ## データベーステーブル構成
-
-CREATE TABLE blog_post (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    content TEXT NOT NULL,
-    author VARCHAR(100) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
 | カラム名       | データ型        | 制約                                         | 説明                       |
 |----------------|-----------------|----------------------------------------------|----------------------------|
 | id             | SERIAL          | PRIMARY KEY                                  | 一意の識別子（自動インクリメント） |
@@ -54,9 +45,18 @@ CREATE TABLE blog_post (
 | created_at     | TIMESTAMP       | NOT NULL, DEFAULT CURRENT_TIMESTAMP          | 作成日時                    |
 | updated_at     | TIMESTAMP       | NOT NULL, DEFAULT CURRENT_TIMESTAMP          | 更新日時                    |
 
+## データベーステーブル作成クエリ
+CREATE TABLE blog_post (  
+    id SERIAL PRIMARY KEY,  
+    title VARCHAR(255) NOT NULL,  
+    content TEXT NOT NULL,  
+    author VARCHAR(100) NOT NULL,  
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,  
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP  
+);
 
 ## ディレクトリ構成
-
+```
 MyBlog/
 ├── src/
 │   ├── main/
